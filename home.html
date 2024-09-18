@@ -1,11 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-</head>
-<body>
-    <h3>Welcome to Home Page.</h3>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home Page</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+            rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+
+    </head>
+    <body>
+        <main class="flex justify-center">
+            <div class="mockup-phone">
+                <div class="camera">
+
+                </div>
+                <div class="display">
+
+                    <div class="artboard artboard-demo phone-1">
+
+                        <div class="mt-10">
+                            <div class="stats shadow ">
+                                <div class="stat ">
+                                    <!-- <div class="stat-title">Total Page Views</div> -->
+                                    <div class="stat-value">89,400</div>
+                                    <div class="stat-desc">Available
+                                        Balance</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                        <div class="divider"></div>
+                        <div class=" flex gap-5">
+                            <button class="btn btn-lg">Add Money</button>
+                            <button class="btn btn-lg">Cash Out</button>
+                        </div>
+
+                        <div>
+                            <form class="card-body">
+                                <div class="form-control">
+                                  <label class="label">
+                                    <span class="label-text">Amount</span>
+                                  </label>
+                                  <input type="text" placeholder="Amount" autocomplete="off" class="input input-bordered" required />
+                                </div>
+                                <div class="form-control">
+                                  <label class="label">
+                                    <span class="label-text">Pin</span>
+                                  </label>
+                                  <input type="password" autocomplete="off" placeholder="pin" class="input input-bordered" required />
+                                
+                                </div>
+                                <div class="form-control mt-6">
+                                  <button class="btn btn-primary">Add Money</button>
+                                </div>
+                             </form>
+                        </div>
+                        
+
+
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <script src="./js/home.js"></script>
+    </body>
 </html>
