@@ -24,7 +24,7 @@
                             <div class="stats shadow ">
                                 <div class="stat ">
                                     <!-- <div class="stat-title">Total Page Views</div> -->
-                                    <div class="stat-value">89,400</div>
+                                    <div id="balance" class="stat-value">89400</div>
                                     <div class="stat-desc">Available
                                         Balance</div>
                                 </div>
@@ -34,30 +34,56 @@
                         
                         <div class="divider"></div>
                         <div class=" flex gap-5">
-                            <button class="btn btn-lg">Add Money</button>
-                            <button class="btn btn-lg">Cash Out</button>
+                            <button id="add-money" class="btn btn-lg">Add Money</button>
+                            <button id="cash-out" class="btn btn-lg">Cash Out</button>
                         </div>
 
-                        <div>
+                        <div id="add-money-container" class="hidden">
                             <form class="card-body">
                                 <div class="form-control">
                                   <label class="label">
                                     <span class="label-text">Amount</span>
                                   </label>
-                                  <input type="text" placeholder="Amount" autocomplete="off" class="input input-bordered" required />
+                                  <input type="text" id="amount" placeholder="Amount" autocomplete="off" class="input input-bordered" required />
                                 </div>
                                 <div class="form-control">
                                   <label class="label">
                                     <span class="label-text">Pin</span>
                                   </label>
-                                  <input type="password" autocomplete="off" placeholder="pin" class="input input-bordered" required />
+                                  <input id="pin" type="password" autocomplete="off" placeholder="pin" class="input input-bordered" required />
                                 
                                 </div>
-                                <div class="form-control mt-6">
-                                  <button class="btn btn-primary">Add Money</button>
+                                <div  class="form-control mt-6">
+                                  <button id="add-money-clicker" class="btn btn-primary">Add Money</button>
                                 </div>
+
                              </form>
                         </div>
+
+                        <!-- cash-out-container -->
+
+                        <div id="cash-out-container" class="hidden">
+                            <form class="card-body">
+                                <div class="form-control">
+                                  <label class="label">
+                                    <span class="label-text">Amount</span>
+                                  </label>
+                                  <input type="text" id="cash-out-amount" placeholder="Amount" autocomplete="off" class="input input-bordered" required />
+                                </div>
+                                <div class="form-control">
+                                  <label class="label">
+                                    <span class="label-text">Pin</span>
+                                  </label>
+                                  <input id="cash-pin" type="password" autocomplete="off" placeholder="pin" class="input input-bordered" required />
+                                
+                                </div>
+                                <div  class="form-control mt-6">
+                                  <button id="cash-out-clicker" class="btn btn-primary">Cash Out</button>
+                                </div>
+
+                             </form>
+                        </div>
+
                         
 
 
@@ -68,5 +94,8 @@
         </main>
 
         <script src="./js/home.js"></script>
+        <script src="./js/add-money.js"></script>
+        <script src="./js/cash-out.js"></script>
+       
     </body>
 </html>
