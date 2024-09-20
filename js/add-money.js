@@ -2,6 +2,7 @@ console.log('add-money.js connected');
 // Add-Money-Event Listener
 const add_money=document.getElementById('add-money');
 const add_money_container= document.getElementById('add-money-container');
+const transaction_container=document.getElementById('transaction-container');
 add_money.addEventListener('click', function (){
 
 
@@ -9,6 +10,7 @@ add_money.addEventListener('click', function (){
 
     add_money_container.classList.remove('hidden');
     cash_out_container.classList.add('hidden');
+    transaction_container.classList.add('hidden');
     
     
 });
@@ -29,7 +31,19 @@ add_money_clicker.addEventListener('click', function(event){
         
         let newBalance = current_balance + amount;
 
+
         console.log(newBalance);
+        
+        const transaction_container=document.getElementById('transaction-container');
+      
+        const p= document.createElement('p');
+        p.innerHTML=`Added ${amount} Tk. Now current balance is ${newBalance} Tk. `;
+        p.classList.add('p-2','bg-green-500');
+        transaction_container.appendChild(p);
+        console.log(transaction_container);
+        
+        
+        console.log(transaction_container);
         document.getElementById('balance').innerText=Number(newBalance);
         add_money_container.classList.add('hidden');
 

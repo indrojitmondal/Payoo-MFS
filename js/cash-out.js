@@ -10,6 +10,7 @@ cash_out.addEventListener('click', function (){
 
     cash_out_container.classList.remove('hidden');
     add_money_container.classList.add('hidden');
+    transaction_container.classList.add('hidden');
     
     
 });
@@ -29,8 +30,17 @@ cash_out_clicker.addEventListener('click', function(event){
         let newBalance = current_balance - amount;
 
         console.log(newBalance);
+        
+        const transaction_container=document.getElementById('transaction-container');
+      
+        const p= document.createElement('p');
+        p.innerHTML=`Cashed ${amount} Tk. Now current balance is ${newBalance} Tk. `;
+        p.classList.add('p-2','bg-yellow-500');
+        transaction_container.appendChild(p);
+
         document.getElementById('balance').innerText=Number(newBalance);
         cash_out_container.classList.add('hidden');
+
 
     }
     else{

@@ -33,16 +33,18 @@
                         </div>
                         
                         <div class="divider"></div>
-                        <div class=" flex gap-5">
+                        <div class="grid grid-cols-3 gap-2 p-3">
                             <button id="add-money" class="btn btn-lg">Add Money</button>
                             <button id="cash-out" class="btn btn-lg">Cash Out</button>
-                        </div>
+                            <button id="transaction" class="btn btn-lg">Transaction</button>
+                        
+                          </div>
 
                         <div id="add-money-container" class="hidden">
                             <form class="card-body">
                                 <div class="form-control">
                                   <label class="label">
-                                    <span class="label-text">Amount</span>
+                                    <span class="label-text">Add Money Amount</span>
                                   </label>
                                   <input type="text" id="amount" placeholder="Amount" autocomplete="off" class="input input-bordered" required />
                                 </div>
@@ -66,7 +68,7 @@
                             <form class="card-body">
                                 <div class="form-control">
                                   <label class="label">
-                                    <span class="label-text">Amount</span>
+                                    <span class="label-text">Cash Out Amount</span>
                                   </label>
                                   <input type="text" id="cash-out-amount" placeholder="Amount" autocomplete="off" class="input input-bordered" required />
                                 </div>
@@ -84,6 +86,10 @@
                              </form>
                         </div>
 
+                        <div id="transaction-container" class="hidden space-y-2 p-3 overflow-auto">
+                        </div>
+
+                      
                         
 
 
@@ -96,6 +102,7 @@
         <script src="./js/home.js"></script>
         <script src="./js/add-money.js"></script>
         <script src="./js/cash-out.js"></script>
+        <script src="./js/transaction.js"></script>
        
     </body>
 </html>
